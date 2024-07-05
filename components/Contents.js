@@ -59,7 +59,9 @@ const Contents = ({ tab, toDos, editingId, doneToDos, deleteTodo, setEditingId, 
 
                                 {key === editingId ? (
                                     <TextInput
+                                        // onPress={() => console.log(1)}
                                         onSubmitEditing={() => saveEdittedContents(key)}
+                                        autoFocus
                                         style={toDos[key].done ? styles.doneText : styles.inputText}
                                         value={curInputValue}
                                         onChangeText={handleCurContents}
